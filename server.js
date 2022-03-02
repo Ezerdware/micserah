@@ -44,6 +44,10 @@ try {
     console.log(error)
 }
 
+app.get('/', (req, res)=>{
+    res.status(200).json({status:200, detail:"Active"})
+})
+
 try {
 
     require('./controllers/user')(app, db)
